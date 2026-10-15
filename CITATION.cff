@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use MetaDerm-CBM, please cite the accompanying manuscript and this software repository."
+title: "MetaDerm-CBM: Inconsistency-Aware Metacognitive Concept Bottleneck Framework"
+type: software
+authors:
+  - family-names: Weyori
+    given-names: Joshua Akowuje
+    email: joshua.weyori@uenr.edu.gh
+  - family-names: Herson
+    given-names: Emmanuel Ayerko
+  - family-names: Ansah-Sarpong
+    given-names: Richmond
+  - family-names: Baiden
+    given-names: Isaac
+repository-code: "https://github.com/WeyoriJoshua/MetaDerm-CBM"
+url: "https://github.com/WeyoriJoshua/MetaDerm-CBM"
+abstract: >-
+  MetaDerm-CBM is an inconsistency-aware metacognitive concept bottleneck
+  framework for selective and interpretable skin-lesion decision support.
+keywords:
+  - concept bottleneck model
+  - dermoscopy
+  - melanoma
+  - metacognition
+  - selective prediction
+  - interpretable AI
+  - human-in-the-loop AI
+license: "NOASSERTION"
