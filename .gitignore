@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environments
+metaderm_env/
+.venv/
+venv/
+env/
+.conda/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Datasets - never commit source medical datasets
+datasets/
+data/
+data_external/**/images/
+**/Derm7pt/
+**/PH2Dataset/
+**/PH2 Dataset images/
+
+# Model checkpoints / large binaries
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Generated bulk outputs
+results/**
+!results/publication/
+!results/publication/**
+*.npy
+*.npz
+
+# Local/private paths and runtime files
+.env
+*.log
+streamlit.log
+
+# Temporary exports
+*.tmp
+~$*
