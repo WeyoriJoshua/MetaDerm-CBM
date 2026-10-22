@@ -1,0 +1,6 @@
+project:
+  output_root: "results/efficientnet_b3"
+  checkpoint_root: "checkpoints/efficientnet_b3"
+model:
+  backbone: "efficientnet_b3"
+  pretrained: true

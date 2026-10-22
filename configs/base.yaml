@@ -1,0 +1,85 @@
+project:
+  name: "MetaDerm-CBM"
+  seed: 2026
+  output_root: "results/efficientnet_b3"
+  checkpoint_root: "checkpoints/efficientnet_b3"
+
+data:
+  root: "D:/PATH/TO/release_v0"
+  image_dir: "images"
+  meta_csv: "meta/meta.csv"
+  split_files:
+    train: "meta/train_indexes.csv"
+    valid: "meta/valid_indexes.csv"
+    test: "meta/test_indexes.csv"
+  split_index_col: "indexes"
+  image_col: "derm"
+  diagnosis_col: "diagnosis"
+  diagnosis_positive_prefix: "melanoma"
+  image_size: 224
+  num_workers: 4
+  pin_memory: true
+  concepts:
+    pigment_network: ["absent", "typical", "atypical"]
+    streaks: ["absent", "regular", "irregular"]
+    pigmentation: ["absent", "diffuse regular", "localized regular", "localized irregular", "diffuse irregular"]
+    regression_structures: ["absent", "blue areas", "white areas", "combinations"]
+    dots_and_globules: ["absent", "regular", "irregular"]
+    blue_whitish_veil: ["absent", "present"]
+    vascular_structures: ["absent", "comma", "wreath", "arborizing", "hairpin", "dotted", "within regression", "linear irregular"]
+model:
+  backbone: "efficientnet_b3"
+  pretrained: true
+  dropout: 0.25
+training:
+  batch_size: 24
+  epochs: 60
+  learning_rate: 0.0002
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  patience: 10
+  amp: true
+  label_smoothing: 0.0
+  scheduler: "cosine"
+  selection_metric_concepts: "mean_macro_f1"
+  selection_metric_blackbox: "auroc"
+reasoning:
+  threshold: 3.0
+  temperature: 0.75
+  criteria:
+    pigment_network:
+      weight: 2.0
+      suspicious_states: ["atypical"]
+    blue_whitish_veil:
+      weight: 2.0
+      suspicious_states: ["present"]
+    vascular_structures:
+      weight: 2.0
+      suspicious_states: ["dotted", "linear irregular"]
+    streaks:
+      weight: 1.0
+      suspicious_states: ["irregular"]
+    dots_and_globules:
+      weight: 1.0
+      suspicious_states: ["irregular"]
+    pigmentation:
+      weight: 1.0
+      suspicious_states: ["localized irregular", "diffuse irregular"]
+    regression_structures:
+      weight: 1.0
+      suspicious_states: ["blue areas", "white areas", "combinations"]
+metacognition:
+  weights:
+    concept_confidence: 0.30
+    diagnosis_confidence: 0.20
+    neural_symbolic_agreement: 0.25
+    profile_reliability: 0.25
+  target_accepted_risk: 0.10
+  minimum_coverage: 0.50
+  abstain_fraction_of_deferred: 0.35
+  unseen_profile_reliability: 0.0
+calibration:
+  max_iter: 100
+statistics:
+  bootstrap_iterations: 10000
+  seed: 2026

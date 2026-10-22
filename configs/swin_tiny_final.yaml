@@ -1,0 +1,15 @@
+project:
+  output_root: results/swin_tiny_final
+  checkpoint_root: checkpoints/swin_tiny_final
+metacognition:
+  weights:
+    concept_confidence: 0.3
+    diagnosis_confidence: 0.2
+    neural_symbolic_agreement: 0.0
+    profile_reliability: 0.25
+  query_policy: reasoning_impact
+  design_version: frozen_internal_v1.0
+model:
+  backbone: swin_tiny_patch4_window7_224.ms_in1k
+data:
+  image_size: 224

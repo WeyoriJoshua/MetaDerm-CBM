@@ -1,0 +1,7 @@
+{
+  "external_root": "results\\ph2_external\\efficientnet_b3",
+  "internal_root": "results\\efficientnet_b3_final",
+  "bootstrap_iterations": 10000,
+  "random_seed": 2026,
+  "analysis_note": "PH2 remained locked. No model, calibration, threshold, metacognitive-weight, reasoning-rule, or query-policy tuning was performed in this analysis."
+}
