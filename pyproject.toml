@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metaderm-cbm"
+version = "0.1.0"
+description = "Publication-oriented MetaDerm-CBM research framework"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "torch>=2.6",
+  "torchvision>=0.21",
+  "numpy>=2.0,<3",
+  "pandas>=2.2",
+  "scikit-learn>=1.6",
+  "scipy>=1.15",
+  "matplotlib>=3.9",
+  "Pillow>=11.0",
+  "PyYAML>=6.0",
+  "tqdm>=4.67",
+  "joblib>=1.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"

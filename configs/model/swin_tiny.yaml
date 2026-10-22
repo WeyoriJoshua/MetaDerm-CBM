@@ -1,0 +1,6 @@
+project:
+  output_root: "results/swin_tiny"
+  checkpoint_root: "checkpoints/swin_tiny"
+model:
+  backbone: "swin_tiny"
+  pretrained: true

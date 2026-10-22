@@ -1,0 +1,6 @@
+seed,blackbox_correct_reasoner_wrong,blackbox_wrong_reasoner_correct,discordant_pairs,mcnemar_exact_p,holm_adjusted_p
+2026,12,15,27,0.7011080384254456,1.0
+2027,12,10,22,0.8318119049072266,1.0
+2028,12,10,22,0.8318119049072266,1.0
+2029,12,11,23,1.0,1.0
+2030,9,13,22,0.5234670639038086,1.0

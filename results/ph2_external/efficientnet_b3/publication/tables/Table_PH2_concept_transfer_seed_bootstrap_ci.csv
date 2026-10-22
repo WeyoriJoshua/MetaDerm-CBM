@@ -1,0 +1,16 @@
+concept,metric,bootstrap_ci_low,bootstrap_ci_high
+blue_whitish_veil_presence,accuracy,0.8629999999999999,0.8879999999999999
+blue_whitish_veil_presence,macro_f1,0.6939363540466407,0.7758276986481599
+blue_whitish_veil_presence,auroc,0.8364498644986451,0.9049457994579946
+dots_and_globules_3state,accuracy,0.4109999999999999,0.44300000000000006
+dots_and_globules_3state,macro_f1,0.38771366410198144,0.4333585863010212
+dots_and_globules_3state,auroc,0.6686088419937297,0.6833467815230565
+pigment_network_typical_vs_atypical,accuracy,0.582,0.626
+pigment_network_typical_vs_atypical,macro_f1,0.560815599257296,0.6109561613802516
+pigment_network_typical_vs_atypical,auroc,0.6928366174055828,0.7734811165845648
+regression_structures_presence,accuracy,0.836,0.857
+regression_structures_presence,macro_f1,0.6489471120012993,0.6932858575446843
+regression_structures_presence,auroc,0.7442285714285714,0.8190628571428571
+streaks_presence,accuracy,0.756,0.807
+streaks_presence,macro_f1,0.6374883061481973,0.6868811907459468
+streaks_presence,auroc,0.7624313725490197,0.7994117647058824

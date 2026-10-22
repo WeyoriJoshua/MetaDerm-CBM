@@ -1,0 +1,6 @@
+metacognition:
+  weights:
+    concept_confidence: 0.30
+    diagnosis_confidence: 0.20
+    neural_symbolic_agreement: 0.25
+    profile_reliability: 0.0

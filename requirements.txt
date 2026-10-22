@@ -1,0 +1,14 @@
+torch>=2.6
+torchvision>=0.21
+numpy>=2.0,<3
+pandas>=2.2
+scikit-learn>=1.6
+scipy>=1.15
+matplotlib>=3.9
+Pillow>=11.0
+PyYAML>=6.0
+tqdm>=4.67
+joblib>=1.4
+jupyterlab>=4.3
+pytest>=8.3
+ruff>=0.9

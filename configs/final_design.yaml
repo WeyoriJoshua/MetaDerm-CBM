@@ -1,0 +1,13 @@
+project:
+  output_root: "results/efficientnet_b3_final"
+  checkpoint_root: "checkpoints/efficientnet_b3_final"
+
+metacognition:
+  weights:
+    concept_confidence: 0.30
+    diagnosis_confidence: 0.20
+    neural_symbolic_agreement: 0.00
+    profile_reliability: 0.25
+
+  query_policy: "reasoning_impact"
+  design_version: "frozen_internal_v1.0"
